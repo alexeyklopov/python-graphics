@@ -8,11 +8,11 @@ c.pack()
 def menu():
     global b1, b2
     c.config(width=400, height=500, )
-    c.create_text(195, 150, text="PONG", fill='black', font=("Untitled2", 100))
-    c.create_text(205, 142, text="PONG", fill='white', font=("Untitled2", 100))
-    b1 = Button(text="PLAY", bg='white', font=("Untitled2", 30), fg='black', bd=0, width=7, height=0, command=START)
+    c.create_text(195, 150, text="PONG", fill='black', font=("Calibri", 80))
+    c.create_text(205, 142, text="PONG", fill='white', font=("Calibri", 80))
+    b1 = Button(text="PLAY", bg='white', font=("Calibri", 30), fg='black', bd=0, width=7, height=0, command=START)
     b1.place(x=140, y=250)
-    b2 = Button(text="EXIT", bg='white', font=("Untitled2", 30), fg='black', bd=0, width=7, height=0, command=EXIT)
+    b2 = Button(text="EXIT", bg='white', font=("Calibri", 30), fg='black', bd=0, width=7, height=0, command=EXIT)
     b2.place(x=140, y=350)
     c.create_rectangle(128, 255, 255, 320, fill='black')
     c.create_rectangle(128, 355, 255, 420, fill='black')
@@ -44,9 +44,9 @@ def game():
     scoreleft = 0
     scoreright = 0
     c.config(width=800, height=600)
-    ls = Label(text=scoreleft, bg='#292727', fg='white', font=("Untitled2", 80))
+    ls = Label(text=scoreleft, bg='#292727', fg='white', font=("Calibri", 80))
     ls.place(x=290, y=20)
-    rs = Label(text=scoreright, bg='#292727', fg='white', font=("Untitled2", 80))
+    rs = Label(text=scoreright, bg='#292727', fg='white', font=("Calibri", 80))
     rs.place(x=440, y=20)
     c.create_rectangle(45, 134, 755, 566, outline='white', width=8)
     c.create_line(400, 138, 400, 566, fill='white', width=8, dash=(10, 2))
@@ -114,10 +114,10 @@ def motion():
         c.move(point, x, y)
     else:
         c.move(point, x, y)
-    if (scoreleft != 2 and scoreleft != 2):
+    if (scoreleft != 2 and scoreright != 2):
         Win1.after(10, motion)
     else:
-        scoreleft = scoreleft = 0
+        scoreleft = scoreright = 0
         MENU()
 
 
